@@ -1,0 +1,206 @@
+/* ================= VARIABLES ================= */
+/* ===== PALETA CLARA (por defecto) ===== */
+:root {
+  --bg-color: #f5f7fa;
+  --card-bg: #ffffff;
+  --text-color: #ae00ff;
+  --text-muted: #b500f7;
+  --primary: #ab1ae4;
+  --border-color: #e5e7eb;
+}
+/* ================= RESET ================= */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Segoe UI", sans-serif;
+}
+body {
+ background: linear-gradient(135deg, #ffffff, #9000ad);
+ color: var(--text-dark);
+ min-height: 100vh;
+ transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ================= HEADER ================= */
+.header {
+ text-align: center;
+ padding: 2rem 1rem;
+ background: linear-gradient(90deg, var(--primary), var(--secondary));
+ color: rgb(255, 255, 255);
+ box-shadow: var(--shadow);
+}
+.header h1 {
+ font-size: 2.2rem;
+ font-weight: 700;
+}
+
+/* ================= SEARCH ================= */
+.search-section {
+ display: flex;
+ justify-content: center;
+ gap: 1rem;
+ padding: 1.5rem;
+}
+.search-section input {
+ width: 280px;
+ padding: 0.7rem 1rem;
+ border-radius: 12px;
+ border: none;
+ outline: none;
+ box-shadow: var(--shadow);
+}
+.search-section button {
+ padding: 0.7rem 1.2rem;
+ border-radius: 12px;
+  border: none;
+ background: var(--primary);
+ color: white;
+ font-weight: 600;
+ cursor: pointer;
+ transition: 0.3s;
+}
+.search-section button:hover {
+ background: var(--secondary);
+ transition: 0.3s;
+}
+/* ================= MAIN LAYOUT ================= */
+.main-content {
+ display: grid;
+ grid-template-columns: 2fr 1fr;
+ gap: 2rem;
+ padding: 2rem;
+}
+/* ================= CARDS ================= */
+.cards-section h2 {
+ margin-bottom: 1rem;
+}
+.cards-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+ gap: 1.5rem;
+}
+.card {
+     background: var(--card-bg);
+ border-radius: var(--border-radius);
+ box-shadow: var(--shadow);
+ padding: 1rem;
+ text-align: center;
+ cursor: pointer;
+ transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+ transform: translateY(-6px);
+ box-shadow: 0 15px 35px rgba(68, 0, 255, 0.933);
+}
+.card img {
+ width: 100%;
+ height: 220px;
+ object-fit: cover;
+ border-radius: 12px;
+ margin-bottom: 0.8rem;
+}
+.card h3 {
+ font-size: 1.1rem;
+ color: var(--primary);
+}
+.card p {
+ font-size: 0.9rem;
+ color: var(--text-light);
+}
+/* ================= DETAIL PANEL ================= */
+.detail-section {
+ background: var(--card-bg);
+ border-radius: var(--border-radius);
+ box-shadow: var(--shadow);
+ padding: 1.5rem;
+ position: sticky;
+ top: 2rem;
+ height: fit-content;
+}
+.detail-section h2 {
+ margin-bottom: 1rem;
+ color: var(--primary);
+}
+.detail-empty {
+ color: var(--text-light);
+ font-style: italic;
+}
+.detail-content.hidden {
+ display: none;
+}
+.detail-content img {
+ width: 100%;
+ border-radius: 14px;
+ margin-bottom: 1rem;
+}
+.detail-content h3 {
+ font-size: 1.5rem;
+ margin-bottom: 0.5rem;
+}
+.detail-content p {
+ margin: 0.3rem 0;
+ font-size: 0.95rem;
+}
+.detail-content h4 {
+ margin-top: 1rem;
+ color: var(--secondary);
+}
+.detail-content ul {
+ list-style: none;
+ padding-left: 0;
+}
+.detail-content li {
+ font-size: 0.9rem;
+ margin: 0.2rem 0;
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+ .main-content {
+  grid-template-columns: 1fr;
+ }
+ .detail-section {
+  position: static;
+ }
+}
+/* ================= Scroll Hero ================= */
+#scroll-hero {
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+ width: 120px;
+ z-index: 9999;
+ pointer-events: none;
+ transition: transform 0.4s ease;
+}
+#scroll-hero img {
+ width: 100%;
+ animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+ 0%  { transform: translateY(0); }
+ 50% { transform: translateY(-10px); }
+ 100% { transform: translateY(0); }
+}
+/* ===== MODO OSCURO (EXTENSIÓN) ===== */
+body.dark {
+  background-color: #7a00bb;
+  color: #ffffff;
+}
+
+body.dark a {
+  color: #3c7dff;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #471d62;
+  color: #e9d3f5;
+  border-color: #74389f;
+}
+
+body.dark button {
+  background-color: #0048e3;
+}
+

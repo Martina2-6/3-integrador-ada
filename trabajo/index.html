@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador de Superhéroes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <h1>`✦ ˑ ִֶ 𓂃⊹Buscador de Superhéroes`✦ ˑ ִֶ 𓂃⊹</h1>
+  </header>
+  <!-- ================= BUSCADOR ================= -->
+  <section class="search-section">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Buscar superhéroe por nombre"
+    >
+    <button id="searchBtn">Buscar</button>
+  </section>
+  <!-- ================= RESULTADOS ================= -->
+  <main class="main-content">
+    <!-- Cards -->
+    <section class="cards-section">
+      <h2>Resultados</h2>
+      <div id="results" class="cards-container">
+        <!-- Cards generadas por JS -->
+      </div>
+    </section>
+    <!-- Detalle -->
+    <aside class="detail-section" id="heroDetail">
+      <h2>Detalle del héroe</h2>
+      <div class="detail-empty">
+       : ̗̀➛ Seleccioná un superhéroe para ver su información completa
+      </div>
+      <div class="detail-content hidden">
+        <img id="detailImage" alt="Imagen del héroe">
+        <h3 id="detailName"></h3>
+        <p><strong>Nombre real:</strong> <span id="detailFullName"></span></p>
+        <p><strong>Editorial:</strong> <span id="detailPublisher"></span></p>
+        <p><strong>Alias:</strong> <span id="detailAliases"></span></p>
+        <p><strong>Lugar de nacimiento:</strong> <span id="detailBirth"></span></p>
+        <p><strong>Ocupación:</strong> <span id="detailOccupation"></span></p>
+        <h4>Estadísticas de poder</h4>
+        <ul>
+          <li>Inteligencia: <span id="statIntelligence"></span></li>
+          <li>Fuerza: <span id="statStrength"></span></li>
+          <li>Velocidad: <span id="statSpeed"></span></li>
+          <li>Combate: <span id="statCombat"></span></li>
+        </ul>
+        <h4>Apariencia</h4>
+        <p>Altura: <span id="detailHeight"></span></p>
+        <p>Peso: <span id="detailWeight"></span></p>
+        <h4>Conexiones</h4>
+        <p id="detailConnections"></p>
+      </div>
+    </aside>
+    <img src="${hero.image}">
+</main>
+  <!-- ================= JS ================= -->
+  <script src="app.js"></script>
+  <div id="scroll-hero">
+  <img src="https://i.pinimg.com/originals/03/22/74/032274ee6cd7e7b14de35d1e1723bc59.png" alt="Heroe flotante">
+</div>
+</body>
+</html>
